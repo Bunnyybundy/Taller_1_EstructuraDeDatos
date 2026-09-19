@@ -12,7 +12,7 @@ class Paciente : public Persona
      string servicio;
 
     public:
-    Paciente(string _id, string _nombre, string _edad, string _servicio):Persona(_id, _nombre, _edad),servicio(_servicio) {}
+    Paciente(string _id, string _nombre, int _edad, string _servicio):Persona(_id, _nombre, _edad),servicio(_servicio) {}
 
     string getServicio() const { return servicio; }
 
