@@ -2,50 +2,17 @@
 
 #include "main.h"
 
-#include <fstream>
 #include <iostream>
-#include <sstream>
 
 #include "ColaPacientes.h"
 #include "Hospital.h"
-#include "PilaHistorial.h"
 using namespace std;
-
-
-void cargarPacientes(string nombreArchivo, ColaPacientes& cola)
-{
-   ifstream archivo(nombreArchivo);
-    if (!archivo.is_open())
-    {
-        cout<<"Error al abrir el archivo"<<endl;
-        return;
-    }
-    string linea;
-    while (getline(archivo,linea))
-    {
-        stringstream ss(linea);
-        string id, nombre, edadStr, servicio;
-        getline(ss, id, ',');
-        getline(ss, nombre, ',');
-        getline(ss, edadStr, ',');
-        getline(ss, servicio, ',');
-
-        int edad = stoi(edadStr);
-        Paciente* p = new Paciente(id, nombre, edad, servicio);
-        cola.enqueue(p);
-    }
-    archivo.close();
-}
-
-void atenderPacientes(ColaPacientes& cola, Hospital& h, PilaHistorial& historial, int cantidad)
-{
-}
 
 int main()
 {
     Hospital h;
     ColaPacientes cola;
-    PilaHistorial historial;
+    PilaPacientes historial;
 
     cargarPacientes("pacientes.txt",cola);
 
@@ -61,11 +28,7 @@ int main()
 
         switch (opcion)
         {
-            case 1:
-            int cant;
-            cout << " Indique la cantidad de pacientes a atender: ";
-            cin >> cant;
-            atenderPacientes(cola, h, historial, cant);
+            case 1: atenderPacientes(cola, h, historial);
                  break;
             case 2: h.mostrarServicios();
                  break;
