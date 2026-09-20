@@ -7,20 +7,22 @@ using namespace std;
 
 class Persona
 {
-    protected:
+protected:
     string id;
     string nombre;
     int edad;
 
-    public:
-    Persona(string _id, string _nombre, int _edad) : id(_id), nombre(_nombre), edad(_edad) {}
+public:
+    Persona();
+    Persona(const string& id, const string& nombre, int edad);
+    virtual ~Persona();
 
-    virtual ~Persona() {}
+    string getId() const;
+    string getNombre() const;
+    int getEdad() const;
 
-    string getId() { return id; }
-    string getNombre() { return nombre; }
-    int getEdad() { return edad; }
-
+    void setNombre(const string& nombre);
+    void setEdad(int edad);
     virtual void mostrarInfo() const;
 };
 
