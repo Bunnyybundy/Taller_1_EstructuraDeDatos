@@ -1,12 +1,12 @@
 # Taller 1 - Estructura de Datos
 
-## 👥 Integrantes
+## Integrantes
 - **Constanza Araya** – **21.609.057-8** – **Bunnyybundy** – **ICCI**
 - **Kevin Zamora** – **21.578.521-1** – **kivairou** – **ICCI**
 
 ---
 
-## 📖 Descripción
+##  Descripción
 Este taller implementa un sistema de gestión hospitalaria utilizando **estructuras de datos en C++**.  
 El programa permite:
 - Ingresar pacientes a una **cola dinámica**.
@@ -22,14 +22,14 @@ Las estructuras principales creadas son:
 
 ---
 
-## ⚙️ Instrucciones de Compilación
+##  Instrucciones de Compilación
 
 ### Usando CLion
 1. Abrir el proyecto en CLion.
 2. Verificar que el archivo `CMakeLists.txt` incluya todos los `.cpp`.
 3. Seleccionar **Build → Build Project** o presionar `Ctrl+F9`.
 
-## ▶️ Instrucciones de Ejecución
+##  Instrucciones de Ejecución
 
 - Asegúrate de que el archivo **`pacientes.txt`** esté en la misma carpeta que el ejecutable.  
   Este archivo contiene los datos de prueba para cargar pacientes automáticamente.
