@@ -4,17 +4,25 @@
 #define TALLER_1_ESTRUCTURADEDATOS_PACIENTE_H
 
 #include "Persona.h"
+#include <string>
 using namespace std;
 
 class Paciente : public Persona
 {
-    private:
-     string servicio;
+private:
+    string servicio;
+    bool atendido;
 
-    public:
-    Paciente(string _id, string _nombre, int _edad, string _servicio):Persona(_id, _nombre, _edad),servicio(_servicio) {}
+public:
+    Paciente();
+    Paciente(const string& id, const string& nombre, int edad, const string& servicio);
+    ~Paciente();
 
-    string getServicio() const { return servicio; }
+    string getServicio() const;
+    void setServicio(const string& servicio);
+
+    bool getAtendido() const;
+    void setAtendido(bool valor);
 
     void mostrarInfo() const override;
 };

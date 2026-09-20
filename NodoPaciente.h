@@ -10,7 +10,7 @@ struct NodoPaciente
     Paciente* paciente;
     NodoPaciente* siguiente;
 
-    NodoPaciente(Paciente* p):paciente(p), siguiente(nullptr){}
+    NodoPaciente(Paciente* p) : paciente(p), siguiente(nullptr) {}
 };
 
 
