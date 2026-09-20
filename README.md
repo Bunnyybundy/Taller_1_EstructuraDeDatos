@@ -48,7 +48,7 @@ El menú mostrará las opciones disponibles:
 
 ---
 
-## 📄 Observaciones
+##  Observaciones
 - Proyecto desarrollado en **C++17**.
 - Configuración mediante **CMake** en CLion.
 - Se aplican estructuras dinámicas (listas, colas y pilas) para simular procesos hospitalarios.
