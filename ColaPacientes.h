@@ -21,6 +21,7 @@ public:
     Paciente* dequeue();
     void mostrar();
     bool estaVacia() const{ return frente == nullptr; };
+    bool contieneId(const string& id) const;
 };
 
 #endif //TALLER_1_ESTRUCTURADEDATOS_COLAPACIENTES_H

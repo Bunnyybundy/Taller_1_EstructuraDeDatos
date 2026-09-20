@@ -50,3 +50,13 @@ void ColaPacientes::mostrar()
         actual = actual->siguiente;
     }
 }
+
+bool ColaPacientes::contieneId(const string &id) const {
+
+    NodoPaciente* actual = frente;
+    while (actual) {
+        if (actual->paciente->getId() == id) return true;
+        actual = actual->siguiente;
+    }
+    return false;
+}
