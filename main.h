@@ -6,6 +6,6 @@
 
 void cargarPacientes(const std::string& nombreArchivo, ColaPacientes& cola);
 
-void atenderPacientes(ColaPacientes& cola, Hospital& hospital, PilaPacientes& historial);
+void atenderPacientes(ColaPacientes& cola, Hospital& hospital, PilaHistorial& historial);
 
 #endif //TALLER_1_ESTRUCTURADEDATOS_MAIN_H
